@@ -2,32 +2,42 @@ import { Navbar } from "@/components/Navbar";
 import { HeroSection } from "@/components/HeroSection";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Link as LinkIcon, Lightbulb, Handshake, Leaf } from "lucide-react";
+import {
+  ArrowRight,
+  Link as LinkIcon,
+  Lightbulb,
+  Handshake,
+  Leaf,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 
 const highlights = [
   {
     icon: LinkIcon,
     title: "Integration",
-    description: "We seamlessly integrate all aspects of the agricultural value chain, from seed production to market access, ensuring efficiency, quality control, and traceability.",
+    description:
+      "We seamlessly integrate all aspects of the agricultural value chain, from seed production to market access, ensuring efficiency, quality control, and traceability.",
     link: "/services",
   },
   {
     icon: Lightbulb,
     title: "Innovation",
-    description: "We continuously invest in research and support the development of pioneer new technologies, practices, and products that address emerging challenges and opportunities in agriculture.",
+    description:
+      "We continuously invest in research and support the development of pioneer new technologies, practices, and products that address emerging challenges and opportunities in agriculture.",
     link: "/about",
   },
   {
     icon: Handshake,
     title: "Partnerships",
-    description: "We collaborate with farmers, research institutions, governments, and industry stakeholders to co-create solutions, share knowledge, and drive collective impact.",
+    description:
+      "We collaborate with farmers, research institutions, governments, and industry stakeholders to co-create solutions, share knowledge, and drive collective impact.",
     link: "/csr",
   },
   {
     icon: Leaf,
     title: "Sustainability",
-    description: "We prioritize sustainability in our operations, promoting environmental stewardship, social responsibility, and economic viability across the value chain.",
+    description:
+      "We prioritize sustainability in our operations, promoting environmental stewardship, social responsibility, and economic viability across the value chain.",
     link: "/about",
   },
 ];
@@ -37,7 +47,7 @@ const Index = () => {
     <div className="min-h-screen">
       <Navbar />
       <HeroSection />
-      
+
       {/* Quick Highlights Section */}
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
@@ -49,15 +59,17 @@ const Index = () => {
               Vertically Integrated Business Model
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto mt-4">
-              Seedbury ACR will operates on a vertically integrated business model, encompassing seed and crop production, bulk storage, distribution, processing and market development. This model is characterized by:
+              Seedbury ACR will operates on a vertically integrated business
+              model, encompassing seed and crop production, bulk storage,
+              distribution, processing and market development. This model is
+              characterized by:
             </p>
-          </div>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {highlights.map((item) => (
-              <Link 
-                key={item.title} 
+              <Link
+                key={item.title}
                 to={item.link}
                 className="group p-6 rounded-2xl bg-card border border-border hover:border-primary/50 hover:shadow-lg transition-all duration-300"
               >
@@ -92,8 +104,9 @@ const Index = () => {
             Ready to Partner With Us?
           </h2>
           <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto mb-8">
-            Join thousands of farmers who trust Seedbury ACR for their agricultural needs. 
-            Let's work together to transform agriculture in Ghana.
+            Join thousands of farmers who trust Seedbury ACR for their
+            agricultural needs. Let's work together to transform agriculture in
+            Ghana.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact">
@@ -103,7 +116,11 @@ const Index = () => {
               </Button>
             </Link>
             <Link to="/products">
-              <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
+              <Button
+                size="lg"
+                variant="outline"
+                className="bg-transparent border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
+              >
                 View Our Products
               </Button>
             </Link>
