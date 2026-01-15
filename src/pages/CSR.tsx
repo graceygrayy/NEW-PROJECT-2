@@ -8,7 +8,7 @@ import {
   Users,
   Leaf,
 } from "lucide-react";
-import csrBg from "@/assets/pic3.jpg";
+import csrBg from "@/assets/pic 6.jpg";
 
 const initiatives = [
   {
@@ -83,7 +83,7 @@ const CSR = () => {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${csrBg})` }}
         />
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 container mx-auto px-4 text-center">
           <span className="text-primary text-sm font-semibold uppercase tracking-wider">
             Corporate Social Responsibility
@@ -95,8 +95,7 @@ const CSR = () => {
             At Seedbury ACR, we recognize the importance of social corporate
             responsibility in creating a better world for future generations. We
             are committed to giving back to the communities in which we operate
-            and promoting positive change through our actions. Our social
-            corporate responsibility initiatives include:
+            and promoting positive change through our actions.
           </p>
         </div>
       </section>
