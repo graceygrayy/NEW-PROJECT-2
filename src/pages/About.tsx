@@ -12,7 +12,7 @@ import {
   Sprout,
   Zap,
 } from "lucide-react";
-import aboutBg from "@/assets/image.jpg";
+import aboutBg from "@/assets/pic3.jpg";
 import aboutImage from "@/assets/pic 5.jpeg";
 
 const qualities = [
