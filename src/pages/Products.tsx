@@ -4,6 +4,13 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check } from "lucide-react";
 import productsBg from "@/assets/pic2.jpg";
+import maizeImg from "@/assets/maize seed .jpg";
+import riceImg from "@/assets/rice.jpg";
+import sorghumImg from "@/assets/sorghum-seeds.jpg";
+import soybeanImg from "@/assets/soyabeans.jpg";
+import cowpeaImg from "@/assets/cowbea seed.jpg";
+import tomatoImg from "@/assets/tomatoes seed.jpg";
+import pepperImg from "@/assets/pepper seed.jpg";
 
 const products = [
   {
@@ -11,35 +18,35 @@ const products = [
     variety: "Hybrid & OPV",
     features: ["High yielding", "Drought tolerant", "Disease resistant"],
     category: "Cereals",
-    image: "https://source.unsplash.com/featured/?maize,400x300",
+    image: maizeImg,
   },
   {
     name: "Rice Seeds",
     variety: "Jasmine & Aromatic",
     features: ["Premium quality", "Short maturity", "High germination"],
     category: "Cereals",
-    image: "https://source.unsplash.com/featured/?rice,400x300",
+    image: riceImg,
   },
   {
     name: "Sorghum Seeds",
     variety: "White & Red",
     features: ["Heat tolerant", "Low water requirement", "Versatile use"],
     category: "Cereals",
-    image: "https://source.unsplash.com/featured/?sorghum,400x300",
+    image: sorghumImg,
   },
   {
     name: "Soybean Seeds",
     variety: "Improved Varieties",
     features: ["High protein", "Early maturing", "Nitrogen fixing"],
     category: "Legumes",
-    image: "https://source.unsplash.com/featured/?soybean,400x300",
+    image: soybeanImg,
   },
   {
     name: "Cowpea Seeds",
     variety: "Local & Improved",
     features: ["Heat tolerant", "Pest resistant", "Dual purpose"],
     category: "Legumes",
-    image: "https://source.unsplash.com/featured/?cowpea,400x300",
+    image: cowpeaImg,
   },
   {
     name: "Bambara Groundnut",
@@ -67,14 +74,14 @@ const products = [
     variety: "Hybrid Varieties",
     features: ["High yielding", "Disease resistant", "Long shelf life"],
     category: "Vegetables",
-    image: "https://source.unsplash.com/featured/?tomato,400x300",
+    image: tomatoImg,
   },
   {
     name: "Pepper Seeds",
     variety: "Hot & Sweet",
     features: ["Vibrant colors", "High pungency", "Market demand"],
     category: "Vegetables",
-    image: "https://source.unsplash.com/featured/?pepper,400x300",
+    image: pepperImg,
   },
   {
     name: "Okra Seeds",
