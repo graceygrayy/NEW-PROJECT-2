@@ -13,6 +13,7 @@ import {
   Zap,
 } from "lucide-react";
 import aboutBg from "@/assets/image.jpg";
+import aboutImage from "@/assets/pic 5.jpeg";
 
 const qualities = [
   {
@@ -163,10 +164,12 @@ const About = () => {
               </div>
             </div>
             <div className="relative">
-              <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 overflow-hidden">
-                <div className="absolute inset-4 rounded-xl bg-muted flex items-center justify-center">
-                  <Leaf className="h-24 w-24 text-primary/30" />
-                </div>
+              <div className="aspect-[4/3] rounded-2xl overflow-hidden">
+                <img
+                  src={aboutImage}
+                  alt="Seedbury ACR Agriculture"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-accent rounded-2xl flex items-center justify-center shadow-lg">
                 <div className="text-center">
