@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Leaf } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroCrops from "@/assets/hero-crops.jpg";
 
 export const HeroSection = () => {
@@ -35,13 +36,35 @@ export const HeroSection = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: "0.3s" }}>
-            <Button size="lg" className="group">
-              Explore Our Story
-              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button size="lg" variant="outline" className="bg-background/10 border-background/30 text-background hover:bg-background/20">
-              View Products
-            </Button>
+            <Link to="/about">
+              <Button size="lg" className="group">
+                Explore Our Story
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
+            <Link to="/products">
+              <Button size="lg" variant="outline" className="bg-background/10 border-background/30 text-background hover:bg-background/20">
+                View Products
+              </Button>
+            </Link>
+          </div>
+
+          {/* Stats */}
+          <div className="flex items-center gap-6 md:gap-8 mt-12 pt-8 border-t border-background/20 animate-fade-in" style={{ animationDelay: "0.4s" }}>
+            <div>
+              <span className="block font-serif text-3xl md:text-4xl font-bold text-background">15+</span>
+              <span className="text-sm text-background/70">Years Experience</span>
+            </div>
+            <div className="w-px h-12 bg-background/30" />
+            <div>
+              <span className="block font-serif text-3xl md:text-4xl font-bold text-background">5000+</span>
+              <span className="text-sm text-background/70">Farmers Empowered</span>
+            </div>
+            <div className="w-px h-12 bg-background/30" />
+            <div>
+              <span className="block font-serif text-3xl md:text-4xl font-bold text-background">50+</span>
+              <span className="text-sm text-background/70">Seed Varieties</span>
+            </div>
           </div>
         </div>
       </div>
