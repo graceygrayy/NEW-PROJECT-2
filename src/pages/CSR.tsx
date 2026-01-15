@@ -1,12 +1,20 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { Heart, TreePine, GraduationCap, Droplets, Users, Leaf } from "lucide-react";
+import {
+  Heart,
+  TreePine,
+  GraduationCap,
+  Droplets,
+  Users,
+  Leaf,
+} from "lucide-react";
 
 const initiatives = [
   {
     icon: Heart,
     title: "Community Development",
-    description: "Supporting local communities through infrastructure projects, healthcare initiatives, and social welfare programs that improve quality of life.",
+    description:
+      "We support community development projects aimed at improving education, healthcare, and infrastructure in rural areas.",
     stats: "20+ Communities Served",
     details: [
       "Building community centers and schools",
@@ -18,7 +26,8 @@ const initiatives = [
   {
     icon: TreePine,
     title: "Environmental Conservation",
-    description: "Tree planting campaigns, sustainable farming advocacy, and ecosystem preservation efforts to combat climate change.",
+    description:
+      "We prioritize environmental conservation efforts, promoting sustainable farming practices and biodiversity preservation.",
     stats: "10,000+ Trees Planted",
     details: [
       "Annual tree planting campaigns",
@@ -30,7 +39,8 @@ const initiatives = [
   {
     icon: GraduationCap,
     title: "Empowerment Programs",
-    description: "Training and capacity building for farmers, especially women and youth, to enhance skills and create sustainable livelihoods.",
+    description:
+      "We implement empowerment programs that provide training, resources, and opportunities for women, youth, and marginalized groups in agriculture.",
     stats: "2,000+ Trained",
     details: [
       "Agricultural training workshops",
@@ -42,7 +52,8 @@ const initiatives = [
   {
     icon: Droplets,
     title: "Disaster Relief",
-    description: "Rapid response support during floods, droughts, and other agricultural emergencies affecting farming communities.",
+    description:
+      "We stand ready to provide assistance during times of crisis, offering relief efforts and support to communities affected by natural disasters and emergencies.",
     stats: "500+ Families Supported",
     details: [
       "Emergency seed distribution",
@@ -64,7 +75,7 @@ const CSR = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
-      
+
       {/* Hero Section */}
       <section className="pt-28 pb-16 md:pt-36 md:pb-24 bg-gradient-to-b from-primary/5 to-background">
         <div className="container mx-auto px-4 text-center">
@@ -75,9 +86,11 @@ const CSR = () => {
             Giving Back to Our Communities
           </h1>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            At Seedbury ACR, we believe in business that benefits everyone. Our CSR 
-            initiatives focus on creating lasting positive impact in the communities 
-            where we operate.
+            At Seedbury ACR, we recognize the importance of social corporate
+            responsibility in creating a better world for future generations. We
+            are committed to giving back to the communities in which we operate
+            and promoting positive change through our actions. Our social
+            corporate responsibility initiatives include:
           </p>
         </div>
       </section>
@@ -91,7 +104,9 @@ const CSR = () => {
                 <span className="block font-serif text-3xl md:text-4xl font-bold text-primary-foreground">
                   {stat.number}
                 </span>
-                <span className="text-sm text-primary-foreground/80">{stat.label}</span>
+                <span className="text-sm text-primary-foreground/80">
+                  {stat.label}
+                </span>
               </div>
             ))}
           </div>
@@ -127,7 +142,10 @@ const CSR = () => {
                     </p>
                     <ul className="grid grid-cols-2 gap-2">
                       {initiative.details.map((detail) => (
-                        <li key={detail} className="flex items-center gap-2 text-sm text-muted-foreground">
+                        <li
+                          key={detail}
+                          className="flex items-center gap-2 text-sm text-muted-foreground"
+                        >
                           <Leaf className="h-3.5 w-3.5 text-primary flex-shrink-0" />
                           {detail}
                         </li>
@@ -150,20 +168,25 @@ const CSR = () => {
               Our Commitment to a Better Tomorrow
             </h2>
             <p className="text-background/80 text-lg mb-8">
-              We are committed to sustainable practices that not only benefit our business 
-              but also contribute to the well-being of our communities and the environment. 
-              Through our CSR initiatives, we aim to create a lasting positive impact that 
-              extends beyond agriculture.
+              We are committed to sustainable practices that not only benefit
+              our business but also contribute to the well-being of our
+              communities and the environment. Through our CSR initiatives, we
+              aim to create a lasting positive impact that extends beyond
+              agriculture.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <div className="px-6 py-3 rounded-full bg-background/10 border border-background/20">
-                <span className="text-sm font-medium">Sustainable Agriculture</span>
+                <span className="text-sm font-medium">
+                  Sustainable Agriculture
+                </span>
               </div>
               <div className="px-6 py-3 rounded-full bg-background/10 border border-background/20">
                 <span className="text-sm font-medium">Community First</span>
               </div>
               <div className="px-6 py-3 rounded-full bg-background/10 border border-background/20">
-                <span className="text-sm font-medium">Environmental Stewardship</span>
+                <span className="text-sm font-medium">
+                  Environmental Stewardship
+                </span>
               </div>
             </div>
           </div>

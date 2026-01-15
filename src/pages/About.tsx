@@ -1,32 +1,48 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { Shield, Lightbulb, Leaf, Handshake, Target, Heart, Star, Users, Sprout, Zap } from "lucide-react";
+import {
+  Shield,
+  Lightbulb,
+  Leaf,
+  Handshake,
+  Target,
+  Heart,
+  Star,
+  Users,
+  Sprout,
+  Zap,
+} from "lucide-react";
 
 const qualities = [
   {
     icon: Shield,
     title: "Quality Assurance",
-    description: "Rigorous standards ensure every seed and product meets premium quality benchmarks.",
+    description:
+      "Our commitment to quality ensures that every seed and service meets the highest standards of excellence.",
   },
   {
     icon: Lightbulb,
     title: "Innovation",
-    description: "Cutting-edge agricultural technologies and practices drive our solutions forward.",
+    description:
+      "Through continuous research and development, we pioneer innovative solutions to address the evolving needs of agriculture.",
   },
   {
     icon: Leaf,
     title: "Sustainability",
-    description: "Environmentally responsible methods that protect our planet for future generations.",
+    description:
+      "We prioritize sustainability in all aspects of our operations, promoting environmental stewardship and social responsibility.",
   },
   {
     icon: Handshake,
     title: "Partnership",
-    description: "Building lasting relationships with farmers, communities, and stakeholders.",
+    description:
+      "We believe in the power of collaboration and partnership, working closely with stakeholders to achieve shared goals and mutual success.",
   },
   {
     icon: Target,
     title: "Impact",
-    description: "Measurable positive change in food security and farmer livelihoods across Ghana.",
+    description:
+      "By empowering farmers and communities, we create lasting positive impact that extends far beyond the field.",
   },
 ];
 
@@ -34,31 +50,36 @@ const values = [
   {
     icon: Heart,
     title: "Integrity",
-    description: "We conduct business with honesty, transparency, and ethical practices in all our dealings.",
+    description:
+      "We conduct business with honesty, transparency, and ethical practices in all our dealings.",
     color: "bg-primary",
   },
   {
     icon: Star,
     title: "Excellence",
-    description: "We strive for the highest standards in everything we do, from seed quality to customer service.",
+    description:
+      "We strive for the highest standards in everything we do, from seed quality to customer service.",
     color: "bg-secondary",
   },
   {
     icon: Users,
     title: "Collaboration",
-    description: "We believe in the power of partnerships and working together to achieve shared goals.",
+    description:
+      "We believe in the power of partnerships and working together to achieve shared goals.",
     color: "bg-accent",
   },
   {
     icon: Sprout,
     title: "Sustainability",
-    description: "We are committed to practices that protect and preserve our environment for future generations.",
+    description:
+      "We are committed to practices that protect and preserve our environment for future generations.",
     color: "bg-leaf",
   },
   {
     icon: Zap,
     title: "Impact",
-    description: "We measure our success by the positive change we create in communities and livelihoods.",
+    description:
+      "We measure our success by the positive change we create in communities and livelihoods.",
     color: "bg-earth",
   },
 ];
@@ -67,7 +88,7 @@ const About = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
-      
+
       {/* Hero Section */}
       <section className="pt-28 pb-16 md:pt-36 md:pb-24 bg-gradient-to-b from-primary/5 to-background">
         <div className="container mx-auto px-4 text-center">
@@ -78,7 +99,8 @@ const About = () => {
             Who We Are
           </h1>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Transforming agriculture in Ghana through innovation, quality, and sustainability.
+            Transforming agriculture in Ghana through innovation, quality, and
+            sustainability.
           </p>
         </div>
       </section>
@@ -92,34 +114,45 @@ const About = () => {
                 Our Mission
               </h2>
               <p className="text-muted-foreground text-lg mb-8">
-                To be a driving force in sustainable agricultural transformation by empowering 
-                farmers and communities to thrive and protecting the environment for future generations.
+                At Seedbury ACR, our mission is to revolutionize agriculture
+                through innovation, quality, and sustainability.
               </p>
-              
+
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">
                 Our Vision
               </h2>
               <p className="text-muted-foreground text-lg mb-8">
-                At Seedbury ACR, our mission is to revolutionize agriculture through innovation, 
-                quality, and sustainability. We envision a future where every farmer has access 
-                to premium agricultural resources, enabling food security and economic prosperity 
-                across West Africa and beyond.
+                To be a driving force in sustainable agricultural transformation
+                by empowering farmers and communities to thrive and protecting
+                the environment for future generations.
               </p>
 
               <div className="flex items-center gap-4 pt-4">
                 <div className="text-center">
-                  <span className="block font-serif text-3xl font-bold text-primary">15+</span>
-                  <span className="text-sm text-muted-foreground">Years Experience</span>
+                  <span className="block font-serif text-3xl font-bold text-primary">
+                    15+
+                  </span>
+                  <span className="text-sm text-muted-foreground">
+                    Years Experience
+                  </span>
                 </div>
                 <div className="w-px h-12 bg-border" />
                 <div className="text-center">
-                  <span className="block font-serif text-3xl font-bold text-primary">5000+</span>
-                  <span className="text-sm text-muted-foreground">Farmers Empowered</span>
+                  <span className="block font-serif text-3xl font-bold text-primary">
+                    5000+
+                  </span>
+                  <span className="text-sm text-muted-foreground">
+                    Farmers Empowered
+                  </span>
                 </div>
                 <div className="w-px h-12 bg-border" />
                 <div className="text-center">
-                  <span className="block font-serif text-3xl font-bold text-primary">50+</span>
-                  <span className="text-sm text-muted-foreground">Seed Varieties</span>
+                  <span className="block font-serif text-3xl font-bold text-primary">
+                    50+
+                  </span>
+                  <span className="text-sm text-muted-foreground">
+                    Seed Varieties
+                  </span>
                 </div>
               </div>
             </div>
@@ -131,8 +164,12 @@ const About = () => {
               </div>
               <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-accent rounded-2xl flex items-center justify-center shadow-lg">
                 <div className="text-center">
-                  <span className="block font-serif text-2xl font-bold text-accent-foreground">Ghana</span>
-                  <span className="text-xs text-accent-foreground/80">Based</span>
+                  <span className="block font-serif text-2xl font-bold text-accent-foreground">
+                    Ghana
+                  </span>
+                  <span className="text-xs text-accent-foreground/80">
+                    Based
+                  </span>
                 </div>
               </div>
             </div>
@@ -184,19 +221,18 @@ const About = () => {
               Our Core Values
             </h2>
             <p className="text-muted-foreground text-lg">
-              These principles guide every decision we make and every action we take 
-              as we work to transform agriculture in Ghana.
+              These principles guide every decision we make and every action we
+              take as we work to transform agriculture in Ghana.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
             {values.map((value) => (
-              <div
-                key={value.title}
-                className="relative group"
-              >
+              <div key={value.title} className="relative group">
                 <div className="bg-card rounded-2xl p-6 h-full border border-border hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-                  <div className={`w-14 h-14 rounded-2xl ${value.color} flex items-center justify-center mb-5 shadow-lg`}>
+                  <div
+                    className={`w-14 h-14 rounded-2xl ${value.color} flex items-center justify-center mb-5 shadow-lg`}
+                  >
                     <value.icon className="h-7 w-7 text-primary-foreground" />
                   </div>
                   <h3 className="font-serif text-xl font-bold text-foreground mb-3">

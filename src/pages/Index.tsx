@@ -2,33 +2,33 @@ import { Navbar } from "@/components/Navbar";
 import { HeroSection } from "@/components/HeroSection";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Wheat, Users, Leaf, Shield } from "lucide-react";
+import { ArrowRight, Link as LinkIcon, Lightbulb, Handshake, Leaf } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const highlights = [
   {
-    icon: Wheat,
-    title: "Premium Seeds",
-    description: "High-quality certified seeds for optimal yield",
-    link: "/products",
+    icon: LinkIcon,
+    title: "Integration",
+    description: "We seamlessly integrate all aspects of the agricultural value chain, from seed production to market access, ensuring efficiency, quality control, and traceability.",
+    link: "/services",
   },
   {
-    icon: Users,
-    title: "Farmer Support",
-    description: "Empowering 5000+ farmers across Ghana",
-    link: "/services",
+    icon: Lightbulb,
+    title: "Innovation",
+    description: "We continuously invest in research and support the development of pioneer new technologies, practices, and products that address emerging challenges and opportunities in agriculture.",
+    link: "/about",
+  },
+  {
+    icon: Handshake,
+    title: "Partnerships",
+    description: "We collaborate with farmers, research institutions, governments, and industry stakeholders to co-create solutions, share knowledge, and drive collective impact.",
+    link: "/csr",
   },
   {
     icon: Leaf,
     title: "Sustainability",
-    description: "Environmentally responsible practices",
+    description: "We prioritize sustainability in our operations, promoting environmental stewardship, social responsibility, and economic viability across the value chain.",
     link: "/about",
-  },
-  {
-    icon: Shield,
-    title: "Quality Assured",
-    description: "Rigorous standards for every product",
-    link: "/services",
   },
 ];
 
@@ -43,11 +43,15 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <span className="text-primary text-sm font-semibold uppercase tracking-wider">
-              Why Choose Us
+              Our Business Model
             </span>
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mt-2">
-              Transforming Agriculture in Ghana
+              Vertically Integrated Business Model
             </h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto mt-4">
+              Seedbury ACR will operates on a vertically integrated business model, encompassing seed and crop production, bulk storage, distribution, processing and market development. This model is characterized by:
+            </p>
+          </div>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
