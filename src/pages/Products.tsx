@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check } from "lucide-react";
+import productsBg from "@/assets/pic2.jpg";
 
 const products = [
   {
@@ -99,23 +100,28 @@ const Products = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-28 pb-16 md:pt-36 md:pb-24 bg-gradient-to-b from-primary/5 to-background">
-        <div className="container mx-auto px-4 text-center">
+      <section className="relative pt-28 pb-16 md:pt-36 md:pb-24 bg-gradient-to-b from-primary/5 to-background overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${productsBg})` }}
+        />
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="relative z-10 container mx-auto px-4 text-center">
           <span className="text-primary text-sm font-semibold uppercase tracking-wider">
             Our Products
           </span>
-          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mt-2 mb-6">
+          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-background mt-2 mb-6">
             Premium Seed Varieties
           </h1>
-          <p className="text-muted-foreground text-lg max-w-4xl mx-auto">
+          <p className="text-background/90 text-lg max-w-4xl mx-auto">
             Seedbury ACR plans to focus on a diverse portfolio of staple and
             high-value crops, selected for their nutritional value, market
             demand, and suitability to local growing conditions. Our portfolio
             includes a wide range of crops, namely:
           </p>
-          <ul className="text-muted-foreground text-lg max-w-4xl mx-auto mt-6 space-y-2">
+          <ul className="text-background/90 text-lg max-w-4xl mx-auto mt-6 space-y-2">
             <li>
-              • <strong>Maize:</strong> A major staple crop in Ghana, maize will
+              <strong>Maize:</strong> A major staple crop in Ghana, maize will
               be central to our seed and crop production activities. It serves
               as a key food and feed source.
             </li>
@@ -127,12 +133,12 @@ const Products = () => {
             <li>
               • <strong>Pepper:</strong> Both sweet and hot pepper varieties
               offer opportunities for nutritional enhancement and income
-              generation for smallholder farmers.
+              generation for smallholder farmers
             </li>
             <li>
               • <strong>Soybean:</strong> With its protein-rich profile and
               soil-enriching properties, soybean supports food security and
-              sustainable farming systems.
+              sustainable farming systems
             </li>
             <li>
               • <strong>Cowpea:</strong> Drought-tolerant and protein-rich,
@@ -142,12 +148,12 @@ const Products = () => {
             <li>
               • <strong>Rice:</strong> As an increasingly important staple in
               urban diets, rice offers commercial opportunities and contributes
-              to national food self-sufficiency.
+              to national food self-sufficiency
             </li>
             <li>
               • <strong>Sorghum:</strong> Known for its resilience in harsh
               climates, sorghum is ideal for arid zones and supports food and
-              beverage industries.
+              beverage industries
             </li>
           </ul>
         </div>
