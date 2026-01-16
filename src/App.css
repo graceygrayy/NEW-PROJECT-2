@@ -40,3 +40,72 @@
 .read-the-docs {
   color: #888;
 }
+
+/* Core Values Vertical Layout */
+.core-values-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  gap: 2.5rem;
+}
+.core-values-vertical::before {
+  content: "";
+  position: absolute;
+  left: 44px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: repeating-linear-gradient(
+    to bottom,
+    #d1d5db 0 8px,
+    transparent 8px 16px
+  );
+  z-index: 0;
+}
+.core-value-pill {
+  display: flex;
+  align-items: center;
+  min-width: 340px;
+  max-width: 420px;
+  border-radius: 9999px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 0.5rem 2.5rem 0.5rem 3.5rem;
+  position: relative;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.04);
+}
+.core-value-icon {
+  position: absolute;
+  left: -18px;
+  z-index: 1;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid #fff;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
+}
+.core-value-title {
+  margin-left: 2.5rem;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+.core-value-pill.bg-green-500 .core-value-title {
+  color: #fff;
+}
+.core-value-pill.bg-green-200 .core-value-title {
+  color: #222;
+}
+.core-value-pill.bg-orange-600 .core-value-title,
+.core-value-pill.bg-orange-500 .core-value-title {
+  color: #fff;
+}
+.core-value-pill.bg-blue-900 .core-value-title {
+  color: #fff;
+}
+.core-value-pill.bg-gray-800 .core-value-title {
+  color: #fff;
+}
