@@ -67,23 +67,82 @@ const Index = () => {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {highlights.map((item) => (
-              <Link
-                key={item.title}
-                to={item.link}
-                className="group p-6 rounded-2xl bg-card border border-border hover:border-primary/50 hover:shadow-lg transition-all duration-300"
-              >
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                  <item.icon className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="font-serif text-lg font-semibold text-foreground mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-sm text-muted-foreground">
-                  {item.description}
-                </p>
-              </Link>
-            ))}
+            {/* Add images to each highlight card for more visual appeal */}
+            <Link
+              to="/services"
+              className="group p-6 rounded-2xl bg-card border border-border hover:border-primary/50 hover:shadow-lg transition-all duration-300"
+            >
+              <img
+                src="/src/assets/maize seed .jpg"
+                alt="Integration"
+                className="w-full h-24 object-cover rounded-xl mb-4"
+              />
+              <h3 className="font-serif text-lg font-semibold text-foreground mb-2">
+                Integration
+              </h3>
+              <p className="text-sm text-muted-foreground">
+                We seamlessly integrate all aspects of the agricultural value
+                chain, from seed production to market access, ensuring
+                efficiency, quality control, and traceability.
+              </p>
+            </Link>
+            <Link
+              to="/about"
+              className="group p-6 rounded-2xl bg-card border border-border hover:border-primary/50 hover:shadow-lg transition-all duration-300"
+            >
+              <img
+                src="/src/assets/soyabeans.jpg"
+                alt="Innovation"
+                className="w-full h-24 object-cover rounded-xl mb-4"
+              />
+              <h3 className="font-serif text-lg font-semibold text-foreground mb-2">
+                Innovation
+              </h3>
+              <p className="text-sm text-muted-foreground">
+                We continuously invest in research and support the development
+                of pioneer new technologies, practices, and products that
+                address emerging challenges and opportunities in agriculture.
+              </p>
+            </Link>
+            <Link
+              to="/csr"
+              className="group p-6 rounded-2xl bg-card border border-border hover:border-primary/50 hover:shadow-lg transition-all duration-300"
+            >
+              <img
+                src="/src/assets/pic 5.jpeg"
+                alt="Partnerships"
+                className="w-full h-24 object-cover rounded-xl mb-4"
+              />
+              <h3 className="font-serif text-lg font-semibold text-foreground mb-2">
+                Partnerships
+              </h3>
+              <p className="text-sm text-muted-foreground">
+                We collaborate with farmers, research institutions, governments,
+                and industry stakeholders to co-create solutions, share
+                knowledge, and drive collective impact.
+              </p>
+            </Link>
+            <Link
+              to="/about"
+              className="group p-6 rounded-2xl bg-card border border-border hover:border-primary/50 hover:shadow-lg transition-all duration-300"
+            >
+              <img
+                src="/src/assets/leaf.jpg"
+                alt="Sustainability"
+                className="w-full h-24 object-cover rounded-xl mb-4"
+                onError={(e) => {
+                  e.currentTarget.src = "/src/assets/pic2.jpg";
+                }}
+              />
+              <h3 className="font-serif text-lg font-semibold text-foreground mb-2">
+                Sustainability
+              </h3>
+              <p className="text-sm text-muted-foreground">
+                We prioritize sustainability in our operations, promoting
+                environmental stewardship, social responsibility, and economic
+                viability across the value chain.
+              </p>
+            </Link>
           </div>
 
           <div className="text-center">
@@ -128,6 +187,67 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Testimonials Section */}
+      <section className="py-16 md:py-24 bg-background border-t border-border">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <span className="text-primary text-sm font-semibold uppercase tracking-wider">
+              Testimonials
+            </span>
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mt-2">
+              What Our Clients Say
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto mt-4">
+              Hear from farmers and partners who have experienced the Seedbury
+              ACR difference.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-card p-6 rounded-xl shadow-md flex flex-col items-center">
+              <img
+                src="/src/assets/pic3.jpg"
+                alt="Testimonial 1"
+                className="w-20 h-20 rounded-full object-cover mb-4 border-4 border-primary"
+              />
+              <p className="text-foreground italic mb-2">
+                “Seedbury ACR’s seeds have transformed my farm’s yield. Their
+                support is unmatched!”
+              </p>
+              <span className="font-semibold text-primary">
+                Kwame A., Farmer
+              </span>
+            </div>
+            <div className="bg-card p-6 rounded-xl shadow-md flex flex-col items-center">
+              <img
+                src="/src/assets/pic2.jpg"
+                alt="Testimonial 2"
+                className="w-20 h-20 rounded-full object-cover mb-4 border-4 border-primary"
+              />
+              <p className="text-foreground italic mb-2">
+                “The partnership with Seedbury ACR has brought innovation and
+                growth to our community.”
+              </p>
+              <span className="font-semibold text-primary">
+                Ama S., Community Leader
+              </span>
+            </div>
+            <div className="bg-card p-6 rounded-xl shadow-md flex flex-col items-center">
+              <img
+                src="/src/assets/pic 5.jpeg"
+                alt="Testimonial 3"
+                className="w-20 h-20 rounded-full object-cover mb-4 border-4 border-primary"
+              />
+              <p className="text-foreground italic mb-2">
+                “Excellent quality and service. I recommend Seedbury ACR to
+                every farmer.”
+              </p>
+              <span className="font-semibold text-primary">
+                Joseph T., Agronomist
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
       <Footer />
     </div>
   );
