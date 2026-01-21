@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Leaf } from "lucide-react";
 import { Link } from "react-router-dom";
+
 import heroCrops from "@/assets/hero-crops.jpg";
 
 export const HeroSection = () => {
@@ -15,18 +16,33 @@ export const HeroSection = () => {
       />
       <div className="absolute inset-0 bg-[#0a3d1a]/80 z-10" />
 
-      {/* Hero Content */}
-      <div className="relative z-20 container mx-auto px-4 py-24 flex flex-col items-center text-center">
-        <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 drop-shadow-lg">
+      {/* Hero Content (Left-aligned) */}
+      <div className="relative z-20 container mx-auto px-4 py-24 flex flex-col items-start text-left max-w-3xl">
+        <div className="flex items-center gap-2 mb-6 animate-fade-in">
+          <Leaf className="h-5 w-5 text-secondary" />
+          <span className="text-secondary text-sm font-medium uppercase tracking-wider">
+            Private Seed & Food Processing Company
+          </span>
+        </div>
+        <h1
+          className="font-serif text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-6 animate-fade-in drop-shadow-lg"
+          style={{ animationDelay: "0.1s" }}
+        >
           Cultivating Tomorrow's{" "}
           <span className="text-secondary">Agricultural Excellence</span>
         </h1>
-        <p className="text-lg md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto">
+        <p
+          className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl animate-fade-in"
+          style={{ animationDelay: "0.2s" }}
+        >
           At Seedbury ACR, we're revolutionizing agriculture in Ghana through
           innovation, quality, and sustainability. We empower farmers and
           nurture communities for a thriving future.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
+        <div
+          className="flex flex-col sm:flex-row gap-4 animate-fade-in mb-10"
+          style={{ animationDelay: "0.3s" }}
+        >
           <Link to="/about">
             <Button
               size="lg"
@@ -47,26 +63,29 @@ export const HeroSection = () => {
           </Link>
         </div>
         {/* Stats Row */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-8 mt-8">
-          <div className="text-center">
-            <span className="block font-serif text-4xl md:text-5xl font-bold text-white">
+        <div
+          className="flex items-center gap-6 md:gap-8 mt-12 pt-8 border-t border-white/20 animate-fade-in"
+          style={{ animationDelay: "0.4s" }}
+        >
+          <div>
+            <span className="block font-serif text-3xl md:text-4xl font-bold text-white">
               15+
             </span>
-            <span className="text-sm text-white/80">Years Experience</span>
+            <span className="text-sm text-white/70">Years Experience</span>
           </div>
-          <div className="hidden sm:block w-px h-12 bg-white/30" />
-          <div className="text-center">
-            <span className="block font-serif text-4xl md:text-5xl font-bold text-white">
+          <div className="w-px h-12 bg-white/30" />
+          <div>
+            <span className="block font-serif text-3xl md:text-4xl font-bold text-white">
               5000+
             </span>
-            <span className="text-sm text-white/80">Farmers Empowered</span>
+            <span className="text-sm text-white/70">Farmers Empowered</span>
           </div>
-          <div className="hidden sm:block w-px h-12 bg-white/30" />
-          <div className="text-center">
-            <span className="block font-serif text-4xl md:text-5xl font-bold text-white">
+          <div className="w-px h-12 bg-white/30" />
+          <div>
+            <span className="block font-serif text-3xl md:text-4xl font-bold text-white">
               50+
             </span>
-            <span className="text-sm text-white/80">Seed Varieties</span>
+            <span className="text-sm text-white/70">Seed Varieties</span>
           </div>
         </div>
       </div>
