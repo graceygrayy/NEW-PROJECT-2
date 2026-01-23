@@ -4,27 +4,32 @@ const qualities = [
   {
     icon: Shield,
     title: "Quality Assurance",
-    description: "Rigorous standards ensure every seed and product meets premium quality benchmarks.",
+    description:
+      "Rigorous standards ensure every seed and product meets premium quality benchmarks.",
   },
   {
     icon: Lightbulb,
     title: "Innovation",
-    description: "Cutting-edge agricultural technologies and practices drive our solutions forward.",
+    description:
+      "Cutting-edge agricultural technologies and practices drive our solutions forward.",
   },
   {
     icon: Leaf,
     title: "Sustainability",
-    description: "Environmentally responsible methods that protect our planet for future generations.",
+    description:
+      "Environmentally responsible methods that protect our planet for future generations.",
   },
   {
     icon: Handshake,
     title: "Partnership",
-    description: "Building lasting relationships with farmers, communities, and stakeholders.",
+    description:
+      "Building lasting relationships with farmers, communities, and stakeholders.",
   },
   {
     icon: Target,
     title: "Impact",
-    description: "Measurable positive change in food security and farmer livelihoods across Ghana.",
+    description:
+      "Measurable positive change in food security and farmer livelihoods across Ghana.",
   },
 ];
 
@@ -42,42 +47,58 @@ export const AboutSection = () => {
               Who We Are
             </h2>
             <p className="text-muted-foreground text-lg mb-6">
-              Seedbury ACR is a pioneering private seed and food processing company based in 
-              Ghana. Our mission is to transform agriculture through innovation, delivering 
-              high-quality seeds and agricultural solutions that empower farmers and sustain 
-              communities.
+              Seedbury ACR is a pioneering private seed and food processing
+              company based in Ghana. Our mission is to transform agriculture
+              through innovation, delivering high-quality seeds and agricultural
+              solutions that empower farmers and sustain communities.
             </p>
             <p className="text-muted-foreground text-lg mb-6">
-              We envision a future where every farmer has access to premium agricultural 
-              resources, enabling food security and economic prosperity across West Africa 
-              and beyond.
+              We envision a future where every farmer has access to premium
+              agricultural resources, enabling food security and economic
+              prosperity across West Africa and beyond.
             </p>
             <div className="flex items-center gap-4 pt-4">
               <div className="text-center">
-                <span className="block font-serif text-3xl font-bold text-primary">15+</span>
-                <span className="text-sm text-muted-foreground">Years Experience</span>
+                <span className="block font-serif text-3xl font-bold text-primary">
+                  15+
+                </span>
+                <span className="text-sm text-muted-foreground">
+                  Years Experience
+                </span>
               </div>
               <div className="w-px h-12 bg-border" />
               <div className="text-center">
-                <span className="block font-serif text-3xl font-bold text-primary">5000+</span>
-                <span className="text-sm text-muted-foreground">Farmers Empowered</span>
+                <span className="block font-serif text-3xl font-bold text-primary">
+                  5000+
+                </span>
+                <span className="text-sm text-muted-foreground">
+                  Farmers Empowered
+                </span>
               </div>
               <div className="w-px h-12 bg-border" />
               <div className="text-center">
-                <span className="block font-serif text-3xl font-bold text-primary">50+</span>
-                <span className="text-sm text-muted-foreground">Seed Varieties</span>
+                <span className="block font-serif text-3xl font-bold text-primary">
+                  50+
+                </span>
+                <span className="text-sm text-muted-foreground">
+                  Seed Varieties
+                </span>
               </div>
             </div>
           </div>
           <div className="relative">
-            <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 overflow-hidden">
-              <div className="absolute inset-4 rounded-xl bg-muted flex items-center justify-center">
-                <Leaf className="h-24 w-24 text-primary/30" />
-              </div>
+            <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
+              <img
+                src="/web 2.png"
+                alt="Who We Are Banner"
+                className="w-full h-full object-cover rounded-2xl"
+              />
             </div>
             <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-accent rounded-2xl flex items-center justify-center shadow-lg">
               <div className="text-center">
-                <span className="block font-serif text-2xl font-bold text-accent-foreground">Ghana</span>
+                <span className="block font-serif text-2xl font-bold text-accent-foreground">
+                  Ghana
+                </span>
                 <span className="text-xs text-accent-foreground/80">Based</span>
               </div>
             </div>
