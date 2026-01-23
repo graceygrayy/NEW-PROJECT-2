@@ -89,22 +89,22 @@ const Index = () => {
                 desc: "We prioritize sustainability in our operations, promoting environmental stewardship, social responsibility, and economic viability across the value chain.",
               },
             ].map((card, i) => (
-              <Link
-                to={card.to}
-                key={card.title}
-                className={`group p-6 rounded-2xl bg-card border border-border hover:border-primary/50 hover:shadow-lg transition-all duration-300 fade-in-up`}
-                style={{ animationDelay: `${0.1 + i * 0.15}s` }}
-              >
-                <img
-                  src={card.img}
-                  alt={card.alt}
-                  className="w-full h-40 object-cover rounded-xl mb-4"
-                />
-                <h3 className="font-serif text-lg font-semibold text-foreground mb-2">
-                  {card.title}
-                </h3>
-                <p className="text-sm text-muted-foreground">{card.desc}</p>
-              </Link>
+              <FadeInUp key={card.title} delay={0.1 + i * 0.15}>
+                <Link
+                  to={card.to}
+                  className={`group p-6 rounded-2xl bg-card border border-border hover:border-primary/50 hover:shadow-lg transition-all duration-300`}
+                >
+                  <img
+                    src={card.img}
+                    alt={card.alt}
+                    className="w-full h-40 object-cover rounded-xl mb-4"
+                  />
+                  <h3 className="font-serif text-lg font-semibold text-foreground mb-2">
+                    {card.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground">{card.desc}</p>
+                </Link>
+              </FadeInUp>
             ))}
           </div>
 
@@ -166,48 +166,38 @@ const Index = () => {
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-card p-6 rounded-xl shadow-md flex flex-col items-center">
-              <img
-                src="/src/assets/pic3.jpg"
-                alt="Testimonial 1"
-                className="w-20 h-20 rounded-full object-cover mb-4 border-4 border-primary"
-              />
-              <p className="text-foreground italic mb-2">
-                “Seedbury ACR’s seeds have transformed my farm’s yield. Their
-                support is unmatched!”
-              </p>
-              <span className="font-semibold text-primary">
-                Kwame A., Farmer
-              </span>
-            </div>
-            <div className="bg-card p-6 rounded-xl shadow-md flex flex-col items-center">
-              <img
-                src="/src/assets/pic2.jpg"
-                alt="Testimonial 2"
-                className="w-20 h-20 rounded-full object-cover mb-4 border-4 border-primary"
-              />
-              <p className="text-foreground italic mb-2">
-                “The partnership with Seedbury ACR has brought innovation and
-                growth to our community.”
-              </p>
-              <span className="font-semibold text-primary">
-                Ama S., Community Leader
-              </span>
-            </div>
-            <div className="bg-card p-6 rounded-xl shadow-md flex flex-col items-center">
-              <img
-                src="/src/assets/pic 5.jpeg"
-                alt="Testimonial 3"
-                className="w-20 h-20 rounded-full object-cover mb-4 border-4 border-primary"
-              />
-              <p className="text-foreground italic mb-2">
-                “Excellent quality and service. I recommend Seedbury ACR to
-                every farmer.”
-              </p>
-              <span className="font-semibold text-primary">
-                Joseph T., Agronomist
-              </span>
-            </div>
+            {[
+              {
+                img: "/src/assets/pic3.jpg",
+                alt: "Testimonial 1",
+                text: "“Seedbury ACR’s seeds have transformed my farm’s yield. Their support is unmatched!”",
+                name: "Kwame A., Farmer",
+              },
+              {
+                img: "/src/assets/pic2.jpg",
+                alt: "Testimonial 2",
+                text: "“The partnership with Seedbury ACR has brought innovation and growth to our community.”",
+                name: "Ama S., Community Leader",
+              },
+              {
+                img: "/src/assets/pic 5.jpeg",
+                alt: "Testimonial 3",
+                text: "“Excellent quality and service. I recommend Seedbury ACR to every farmer.”",
+                name: "Joseph T., Agronomist",
+              },
+            ].map((t, i) => (
+              <FadeInUp key={t.alt} delay={0.1 + i * 0.15}>
+                <div className="bg-card p-6 rounded-xl shadow-md flex flex-col items-center">
+                  <img
+                    src={t.img}
+                    alt={t.alt}
+                    className="w-20 h-20 rounded-full object-cover mb-4 border-4 border-primary"
+                  />
+                  <p className="text-foreground italic mb-2">{t.text}</p>
+                  <span className="font-semibold text-primary">{t.name}</span>
+                </div>
+              </FadeInUp>
+            ))}
           </div>
         </div>
       </section>
