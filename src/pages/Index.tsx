@@ -73,9 +73,9 @@ const Index = () => {
               className="group p-6 rounded-2xl bg-card border border-border hover:border-primary/50 hover:shadow-lg transition-all duration-300"
             >
               <img
-                src="/src/assets/maize seed .jpg"
+                src="/web integration.jpg"
                 alt="Integration"
-                className="w-full h-24 object-cover rounded-xl mb-4"
+                className="w-full h-40 object-cover rounded-xl mb-4"
               />
               <h3 className="font-serif text-lg font-semibold text-foreground mb-2">
                 Integration
@@ -91,9 +91,9 @@ const Index = () => {
               className="group p-6 rounded-2xl bg-card border border-border hover:border-primary/50 hover:shadow-lg transition-all duration-300"
             >
               <img
-                src="/src/assets/soyabeans.jpg"
+                src="/innovation.jpeg"
                 alt="Innovation"
-                className="w-full h-24 object-cover rounded-xl mb-4"
+                className="w-full h-40 object-cover rounded-xl mb-4"
               />
               <h3 className="font-serif text-lg font-semibold text-foreground mb-2">
                 Innovation
@@ -109,9 +109,9 @@ const Index = () => {
               className="group p-6 rounded-2xl bg-card border border-border hover:border-primary/50 hover:shadow-lg transition-all duration-300"
             >
               <img
-                src="/src/assets/pic 5.jpeg"
+                src="/partnership.jpg"
                 alt="Partnerships"
-                className="w-full h-24 object-cover rounded-xl mb-4"
+                className="w-full h-40 object-cover rounded-xl mb-4"
               />
               <h3 className="font-serif text-lg font-semibold text-foreground mb-2">
                 Partnerships
@@ -127,12 +127,9 @@ const Index = () => {
               className="group p-6 rounded-2xl bg-card border border-border hover:border-primary/50 hover:shadow-lg transition-all duration-300"
             >
               <img
-                src="/src/assets/leaf.jpg"
+                src="/sustainability.jpeg"
                 alt="Sustainability"
-                className="w-full h-24 object-cover rounded-xl mb-4"
-                onError={(e) => {
-                  e.currentTarget.src = "/src/assets/pic2.jpg";
-                }}
+                className="w-full h-40 object-cover rounded-xl mb-4"
               />
               <h3 className="font-serif text-lg font-semibold text-foreground mb-2">
                 Sustainability
