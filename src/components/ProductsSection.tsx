@@ -2,6 +2,15 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check } from "lucide-react";
 
+
+// Map business model titles to their images
+const businessModelImageMap: Record<string, string> = {
+  Integration: "/web integration.jpg",
+  Innovation: "/innovation.jpeg",
+  Partnerships: "/partnership.jpg",
+  Sustainability: "/sustainability.jpeg",
+};
+
 const products = [
   {
     name: "Maize Seeds",
@@ -53,30 +62,43 @@ export const ProductsSection = () => {
             Premium Seed Varieties
           </h2>
           <p className="text-muted-foreground text-lg">
-            Discover our diverse range of high-quality seeds, carefully selected and 
-            processed to ensure optimal performance across Ghana's varied climatic zones.
+            Discover our diverse range of high-quality seeds, carefully selected
+            and processed to ensure optimal performance across Ghana's varied
+            climatic zones.
           </p>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {products.map((product, index) => (
+          {/* Business Model Cards */}
+          {[
+            { title: "Integration", description: "We seamlessly integrate all aspects of the agricultural value chain, from seed production to market access, ensuring efficiency, quality control, and traceability." },
+            { title: "Innovation", description: "We continuously invest in research and support the development of pioneer new technologies, practices, and products that address emerging challenges and opportunities in agriculture." },
+            { title: "Partnerships", description: "We collaborate with farmers, research institutions, governments, and industry stakeholders to co-create solutions, share knowledge, and drive collective impact." },
+            { title: "Sustainability", description: "We prioritize sustainability in our operations, promoting environmental stewardship, social responsibility, and economic viability across the value chain." },
+          ].map((model) => (
             <div
-              key={product.name}
+              key={model.title}
               className="group bg-card rounded-2xl overflow-hidden border border-border hover:border-primary/50 hover:shadow-xl transition-all duration-300"
             >
-              {/* Product Image Placeholder */}
-              <div className="h-48 bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 relative overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center">
-                    <span className="font-serif text-2xl font-bold text-primary">
-                      {product.name.charAt(0)}
-                    </span>
-                  </div>
-                </div>
-                <Badge className="absolute top-4 left-4 bg-primary/90">
-                  {product.category}
-                </Badge>
+              {/* Business Model Image */}
+              <div className="h-48 relative overflow-hidden">
+                <img
+                  src={businessModelImageMap[model.title]}
+                  alt={model.title + " image"}
+                  className="w-full h-full object-cover object-center"
+                />
               </div>
+              {/* Business Model Info */}
+              <div className="p-6">
+                <h3 className="font-serif text-xl font-bold text-foreground mb-1">
+                  {model.title}
+                </h3>
+                <p className="text-sm text-muted-foreground mb-4">
+                  {model.description}
+                </p>
+              </div>
+            </div>
+          ))}
 
               {/* Product Info */}
               <div className="p-6">
@@ -88,7 +110,10 @@ export const ProductsSection = () => {
                 </p>
                 <ul className="space-y-2">
                   {product.features.map((feature) => (
-                    <li key={feature} className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <li
+                      key={feature}
+                      className="flex items-center gap-2 text-sm text-muted-foreground"
+                    >
                       <Check className="h-4 w-4 text-primary flex-shrink-0" />
                       {feature}
                     </li>
