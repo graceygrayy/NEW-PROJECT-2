@@ -52,94 +52,60 @@ const Index = () => {
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <span className="text-primary text-sm font-semibold uppercase tracking-wider">
-              Our Business Model
-            </span>
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mt-2">
               Vertically Integrated Business Model
             </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto mt-4">
-              Seedbury ACR will operates on a vertically integrated business
-              model, encompassing seed and crop production, bulk storage,
-              distribution, processing and market development. This model is
-              characterized by:
-            </p>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {/* Add images to each highlight card for more visual appeal */}
-            <Link
-              to="/services"
-              className="group p-6 rounded-2xl bg-card border border-border hover:border-primary/50 hover:shadow-lg transition-all duration-300"
-            >
-              <img
-                src="/web integration.jpg"
-                alt="Integration"
-                className="w-full h-40 object-cover rounded-xl mb-4"
-              />
-              <h3 className="font-serif text-lg font-semibold text-foreground mb-2">
-                Integration
-              </h3>
-              <p className="text-sm text-muted-foreground">
-                We seamlessly integrate all aspects of the agricultural value
-                chain, from seed production to market access, ensuring
-                efficiency, quality control, and traceability.
-              </p>
-            </Link>
-            <Link
-              to="/about"
-              className="group p-6 rounded-2xl bg-card border border-border hover:border-primary/50 hover:shadow-lg transition-all duration-300"
-            >
-              <img
-                src="/innovation.jpeg"
-                alt="Innovation"
-                className="w-full h-40 object-cover rounded-xl mb-4"
-              />
-              <h3 className="font-serif text-lg font-semibold text-foreground mb-2">
-                Innovation
-              </h3>
-              <p className="text-sm text-muted-foreground">
-                We continuously invest in research and support the development
-                of pioneer new technologies, practices, and products that
-                address emerging challenges and opportunities in agriculture.
-              </p>
-            </Link>
-            <Link
-              to="/csr"
-              className="group p-6 rounded-2xl bg-card border border-border hover:border-primary/50 hover:shadow-lg transition-all duration-300"
-            >
-              <img
-                src="/partnership.jpg"
-                alt="Partnerships"
-                className="w-full h-40 object-cover rounded-xl mb-4"
-              />
-              <h3 className="font-serif text-lg font-semibold text-foreground mb-2">
-                Partnerships
-              </h3>
-              <p className="text-sm text-muted-foreground">
-                We collaborate with farmers, research institutions, governments,
-                and industry stakeholders to co-create solutions, share
-                knowledge, and drive collective impact.
-              </p>
-            </Link>
-            <Link
-              to="/about"
-              className="group p-6 rounded-2xl bg-card border border-border hover:border-primary/50 hover:shadow-lg transition-all duration-300"
-            >
-              <img
-                src="/sustainability.jpeg"
-                alt="Sustainability"
-                className="w-full h-40 object-cover rounded-xl mb-4"
-              />
-              <h3 className="font-serif text-lg font-semibold text-foreground mb-2">
-                Sustainability
-              </h3>
-              <p className="text-sm text-muted-foreground">
-                We prioritize sustainability in our operations, promoting
-                environmental stewardship, social responsibility, and economic
-                viability across the value chain.
-              </p>
-            </Link>
+            {/* Animated business model cards */}
+            {[
+              {
+                to: "/services",
+                img: "/web integration.jpg",
+                alt: "Integration",
+                title: "Integration",
+                desc: "We seamlessly integrate all aspects of the agricultural value chain, from seed production to market access, ensuring efficiency, quality control, and traceability.",
+              },
+              {
+                to: "/about",
+                img: "/innovation.jpeg",
+                alt: "Innovation",
+                title: "Innovation",
+                desc: "We continuously invest in research and support the development of pioneer new technologies, practices, and products that address emerging challenges and opportunities in agriculture.",
+              },
+              {
+                to: "/csr",
+                img: "/partnership.jpg",
+                alt: "Partnerships",
+                title: "Partnerships",
+                desc: "We collaborate with farmers, research institutions, governments, and industry stakeholders to co-create solutions, share knowledge, and drive collective impact.",
+              },
+              {
+                to: "/about",
+                img: "/sustainability.jpeg",
+                alt: "Sustainability",
+                title: "Sustainability",
+                desc: "We prioritize sustainability in our operations, promoting environmental stewardship, social responsibility, and economic viability across the value chain.",
+              },
+            ].map((card, i) => (
+              <Link
+                to={card.to}
+                key={card.title}
+                className={`group p-6 rounded-2xl bg-card border border-border hover:border-primary/50 hover:shadow-lg transition-all duration-300 fade-in-up`}
+                style={{ animationDelay: `${0.1 + i * 0.15}s` }}
+              >
+                <img
+                  src={card.img}
+                  alt={card.alt}
+                  className="w-full h-40 object-cover rounded-xl mb-4"
+                />
+                <h3 className="font-serif text-lg font-semibold text-foreground mb-2">
+                  {card.title}
+                </h3>
+                <p className="text-sm text-muted-foreground">{card.desc}</p>
+              </Link>
+            ))}
           </div>
 
           <div className="text-center">
