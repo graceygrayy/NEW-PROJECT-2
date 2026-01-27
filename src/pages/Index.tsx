@@ -89,7 +89,7 @@ const Index = () => {
                 desc: "We prioritize sustainability in our operations, promoting environmental stewardship, social responsibility, and economic viability across the value chain.",
               },
             ].map((card, i) => (
-              <FadeInUp key={card.title} delay={0.1 + i * 0.15}>
+              <div key={card.title}>
                 <Link
                   to={card.to}
                   className={`group p-6 rounded-2xl bg-card border border-border hover:border-primary/50 hover:shadow-lg transition-all duration-300`}
@@ -104,7 +104,7 @@ const Index = () => {
                   </h3>
                   <p className="text-sm text-muted-foreground">{card.desc}</p>
                 </Link>
-              </FadeInUp>
+              </div>
             ))}
           </div>
 
@@ -186,7 +186,7 @@ const Index = () => {
                 name: "Joseph T., Agronomist",
               },
             ].map((t, i) => (
-              <FadeInUp key={t.alt} delay={0.1 + i * 0.15}>
+              <div key={t.alt}>
                 <div className="bg-card p-6 rounded-xl shadow-md flex flex-col items-center">
                   <img
                     src={t.img}
@@ -196,7 +196,7 @@ const Index = () => {
                   <p className="text-foreground italic mb-2">{t.text}</p>
                   <span className="font-semibold text-primary">{t.name}</span>
                 </div>
-              </FadeInUp>
+              </div>
             ))}
           </div>
         </div>
