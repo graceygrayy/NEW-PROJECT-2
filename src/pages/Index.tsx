@@ -154,9 +154,6 @@ const Index = () => {
       <section className="py-16 md:py-24 bg-background border-t border-border">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <span className="text-primary text-sm font-semibold uppercase tracking-wider">
-              Testimonials
-            </span>
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mt-2">
               What Our Clients Say
             </h2>
@@ -168,19 +165,19 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                img: "/src/assets/pic3.jpg",
+                img: "/testimony2.webp",
                 alt: "Testimonial 1",
                 text: "“Seedbury ACR’s seeds have transformed my farm’s yield. Their support is unmatched!”",
                 name: "Kwame A., Farmer",
               },
               {
-                img: "/src/assets/pic2.jpg",
+                img: "/testimony3.jpg",
                 alt: "Testimonial 2",
                 text: "“The partnership with Seedbury ACR has brought innovation and growth to our community.”",
                 name: "Ama S., Community Leader",
               },
               {
-                img: "/src/assets/pic 5.jpeg",
+                img: "/testimony4.jpg",
                 alt: "Testimonial 3",
                 text: "“Excellent quality and service. I recommend Seedbury ACR to every farmer.”",
                 name: "Joseph T., Agronomist",
