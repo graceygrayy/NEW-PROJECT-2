@@ -6,6 +6,9 @@
 /* Seedbury ACR Design System - Agricultural Green Palette */
 
 @layer base {
+  body {
+    font-family: 'Playfair Display', serif;
+  }
   :root {
     --background: 60 20% 98%;
     --foreground: 140 30% 15%;

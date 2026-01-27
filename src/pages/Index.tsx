@@ -65,28 +65,28 @@ const Index = () => {
                 img: "/web integration.jpg",
                 alt: "Integration",
                 title: "Integration",
-                desc: "We seamlessly integrate all aspects of the agricultural value chain, from seed production to market access, ensuring efficiency, quality control, and traceability.",
+                desc: "We connect every stage of the agricultural value chain, from seed to market, ensuring efficiency, quality, and transparency for all stakeholders.",
               },
               {
                 to: "/about",
                 img: "/innovation.jpeg",
                 alt: "Innovation",
                 title: "Innovation",
-                desc: "We continuously invest in research and support the development of pioneer new technologies, practices, and products that address emerging challenges and opportunities in agriculture.",
+                desc: "We drive progress by investing in research and pioneering new technologies, practices, and products to solve agriculture’s biggest challenges.",
               },
               {
                 to: "/csr",
                 img: "/partnership.jpg",
                 alt: "Partnerships",
                 title: "Partnerships",
-                desc: "We collaborate with farmers, research institutions, governments, and industry stakeholders to co-create solutions, share knowledge, and drive collective impact.",
+                desc: "We work hand-in-hand with farmers, researchers, and industry partners to co-create solutions, share knowledge, and achieve lasting impact.",
               },
               {
                 to: "/about",
                 img: "/sustainability.jpeg",
                 alt: "Sustainability",
                 title: "Sustainability",
-                desc: "We prioritize sustainability in our operations, promoting environmental stewardship, social responsibility, and economic viability across the value chain.",
+                desc: "We champion responsible practices that protect the environment, support communities, and ensure long-term prosperity across the value chain.",
               },
             ].map((card, i) => (
               <div key={card.title}>
@@ -102,7 +102,9 @@ const Index = () => {
                   <h3 className="font-serif text-lg font-semibold text-foreground mb-2">
                     {card.title}
                   </h3>
-                  <p className="text-sm text-muted-foreground">{card.desc}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed min-h-[72px]">
+                    {card.desc}
+                  </p>
                 </Link>
               </div>
             ))}
@@ -151,11 +153,11 @@ const Index = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 md:py-24 bg-background border-t border-border">
+      <section className="py-16 md:py-24 bg-[#F5F5DC] border-t border-border">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mt-2">
-              What Our Clients Say
+              Testimonials
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto mt-4">
               Hear from farmers and partners who have experienced the Seedbury
@@ -171,24 +173,24 @@ const Index = () => {
                 name: "Kwame A., Farmer",
               },
               {
-                img: "/testimony3.jpg",
+                img: "/testimony4.jpg",
                 alt: "Testimonial 2",
                 text: "“The partnership with Seedbury ACR has brought innovation and growth to our community.”",
                 name: "Ama S., Community Leader",
               },
               {
-                img: "/testimony4.jpg",
+                img: "/testimony3.jpg",
                 alt: "Testimonial 3",
                 text: "“Excellent quality and service. I recommend Seedbury ACR to every farmer.”",
                 name: "Joseph T., Agronomist",
               },
             ].map((t, i) => (
               <div key={t.alt}>
-                <div className="bg-card p-6 rounded-xl shadow-md flex flex-col items-center">
+                <div className="bg-card p-6 rounded-xl shadow-lg border-2 border-primary/20 flex flex-col items-center">
                   <img
                     src={t.img}
                     alt={t.alt}
-                    className="w-20 h-20 rounded-full object-cover mb-4 border-4 border-primary"
+                    className="w-32 h-32 rounded-full object-contain mb-4 border-4 border-primary"
                   />
                   <p className="text-foreground italic mb-2">{t.text}</p>
                   <span className="font-semibold text-primary">{t.name}</span>
