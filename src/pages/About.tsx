@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import aboutBg from "@/assets/pic3.jpg";
 import aboutImage from "@/assets/pic 5.jpeg";
+import aboutHero from "@/assets/about-hero.jpg";
 
 const qualities = [
   {
@@ -92,20 +93,17 @@ const About = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative pt-28 pb-16 md:pt-36 md:pb-24 bg-gradient-to-b from-primary/5 to-background overflow-hidden">
+      <section className="relative py-32 md:py-40 bg-gradient-to-b from-primary/5 to-background overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${aboutBg})` }}
+          style={{ backgroundImage: `url(${aboutHero})` }}
         />
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/70" />
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <span className="text-primary text-sm font-semibold uppercase tracking-wider">
-            About Us
-          </span>
-          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-background mt-2 mb-6">
+          <h1 className="font-serif text-5xl md:text-6xl font-bold text-background mb-4">
             Who We Are
           </h1>
-          <p className="text-background/90 text-lg max-w-2xl mx-auto">
+          <p className="font-sans text-background/90 text-lg max-w-2xl mx-auto">
             Transforming agriculture in Ghana through innovation, quality, and
             sustainability.
           </p>
