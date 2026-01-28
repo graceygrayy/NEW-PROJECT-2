@@ -83,19 +83,14 @@ const CSR = () => {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${csrBg})` }}
         />
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-black/80" />
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <span className="text-primary text-sm font-semibold uppercase tracking-wider">
-            Corporate Social Responsibility
-          </span>
+          {/* Removed 'Corporate Social Responsibility' as requested */}
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-background mt-2 mb-6">
             Giving Back to Our Communities
           </h1>
           <p className="text-background/90 text-lg max-w-2xl mx-auto">
-            At Seedbury ACR, we recognize the importance of social corporate
-            responsibility in creating a better world for future generations. We
-            are committed to giving back to the communities in which we operate
-            and promoting positive change through our actions.
+            Together, we spark change for a brighter future!
           </p>
         </div>
       </section>

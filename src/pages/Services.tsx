@@ -79,9 +79,7 @@ const Services = () => {
         />
         <div className="absolute inset-0 bg-black/40" />
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <span className="text-primary text-sm font-semibold uppercase tracking-wider">
-            What We Offer
-          </span>
+          {/* Removed 'What We Offer' as requested */}
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-background mt-2 mb-6">
             Our Areas of Expertise
           </h1>

@@ -13,31 +13,35 @@ import { Link } from "react-router-dom";
 
 const highlights = [
   {
-    icon: LinkIcon,
+    category: "Model",
+    img: "/web integration.jpg",
     title: "Integration",
-    description:
-      "We seamlessly integrate all aspects of the agricultural value chain, from seed production to market access, ensuring efficiency, quality control, and traceability.",
+    subtitle: "Seamless Value Chain",
+    features: ["Seed to market integration", "Efficiency & traceability", "Quality control"],
     link: "/services",
   },
   {
-    icon: Lightbulb,
+    category: "Model",
+    img: "/innovation.jpeg",
     title: "Innovation",
-    description:
-      "We continuously invest in research and support the development of pioneer new technologies, practices, and products that address emerging challenges and opportunities in agriculture.",
+    subtitle: "Driving Progress",
+    features: ["Research investment", "New technologies", "Solving agri challenges"],
     link: "/about",
   },
   {
-    icon: Handshake,
+    category: "Model",
+    img: "/partnership.jpg",
     title: "Partnerships",
-    description:
-      "We collaborate with farmers, research institutions, governments, and industry stakeholders to co-create solutions, share knowledge, and drive collective impact.",
+    subtitle: "Collaborative Solutions",
+    features: ["Farmer & industry partners", "Knowledge sharing", "Collective impact"],
     link: "/csr",
   },
   {
-    icon: Leaf,
+    category: "Model",
+    img: "/sustainability.jpeg",
     title: "Sustainability",
-    description:
-      "We prioritize sustainability in our operations, promoting environmental stewardship, social responsibility, and economic viability across the value chain.",
+    subtitle: "Responsible Practices",
+    features: ["Environmental stewardship", "Community support", "Long-term prosperity"],
     link: "/about",
   },
 ];
@@ -57,59 +61,55 @@ const Index = () => {
             </h2>
           </div>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {/* Removed 'WHAT WE OFFER' text as requested */}
-            {/* Animated business model cards */}
-            {[
-              {
-                to: "/services",
-                img: "/web integration.jpg",
-                alt: "Integration",
-                title: "Integration",
-                desc: "We connect every stage of the agricultural value chain, from seed to market, ensuring efficiency, quality, and transparency for all stakeholders.",
-              },
-              {
-                to: "/about",
-                img: "/innovation.jpeg",
-                alt: "Innovation",
-                title: "Innovation",
-                desc: "We drive progress by investing in research and pioneering new technologies, practices, and products to solve agriculture’s biggest challenges.",
-              },
-              {
-                to: "/csr",
-                img: "/partnership.jpg",
-                alt: "Partnerships",
-                title: "Partnerships",
-                desc: "We work hand-in-hand with farmers, researchers, and industry partners to co-create solutions, share knowledge, and achieve lasting impact.",
-              },
-              {
-                to: "/about",
-                img: "/sustainability.jpeg",
-                alt: "Sustainability",
-                title: "Sustainability",
-                desc: "We champion responsible practices that protect the environment, support communities, and ensure long-term prosperity across the value chain.",
-              },
-            ].map((card, i) => (
-              <div key={card.title}>
-                <Link
-                  to={card.to}
-                  className={`group p-6 rounded-2xl bg-card border border-border hover:border-primary/50 hover:shadow-lg transition-all duration-300`}
+            <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-16 fade-in-up">
+              {highlights.map((card, i) => (
+                <div
+                  key={card.title}
+                  className="group bg-card rounded-2xl overflow-hidden border border-border hover:border-primary/50 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 fade-in-up"
+                  style={{ animationDelay: `${0.1 + i * 0.1}s` }}
                 >
-                  <img
-                    src={card.img}
-                    alt={card.alt}
-                    className="w-full h-40 object-cover rounded-xl mb-4"
-                  />
-                  <h3 className="font-serif text-lg font-semibold text-foreground mb-2">
-                    {card.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed min-h-[72px]">
-                    {card.desc}
-                  </p>
-                </Link>
-              </div>
-            ))}
-          </div>
+                  {/* Card Image */}
+                  <div className="h-48 relative overflow-hidden">
+                    <img
+                      src={card.img}
+                      alt={card.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <span className="absolute top-3 left-3 bg-primary/90 text-primary-foreground shadow-lg px-4 py-1 rounded text-sm font-semibold">
+                      {card.category}
+                    </span>
+                  </div>
+                  {/* Card Info */}
+                  <div className="p-6">
+                    <h3 className="font-serif text-xl font-black text-foreground mb-2">
+                      {card.title}
+                    </h3>
+                    <p className="text-sm text-muted-foreground mb-4 italic">
+                      {card.subtitle}
+                    </p>
+                    <ul className="space-y-2">
+                      {card.features.map((feature) => (
+                        <li
+                          key={feature}
+                          className="flex items-center gap-2 text-sm text-muted-foreground"
+                        >
+                          <div className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                    <div className="text-right mt-4">
+                      <Link to={card.link} className="text-primary underline text-sm font-medium hover:text-primary/80 transition-colors">
+                        Learn More
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Section Divider */}
+            <div className="w-full h-1 bg-gradient-to-r from-primary/10 via-primary/30 to-primary/10 rounded-full mb-16" />
 
           <div className="text-center">
             <Link to="/about">
