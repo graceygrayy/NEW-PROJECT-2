@@ -56,6 +56,7 @@ const values = [
     description:
       "We conduct business with honesty, transparency, and ethical practices in all our dealings.",
     color: "bg-primary",
+    textColor: "text-primary-foreground",
   },
   {
     icon: Star,
@@ -63,6 +64,7 @@ const values = [
     description:
       "We strive for the highest standards in everything we do, from seed quality to customer service.",
     color: "bg-secondary",
+    textColor: "text-secondary-foreground",
   },
   {
     icon: Users,
@@ -70,20 +72,23 @@ const values = [
     description:
       "We believe in the power of partnerships and working together to achieve shared goals.",
     color: "bg-accent",
+    textColor: "text-accent-foreground",
   },
   {
     icon: Sprout,
     title: "Sustainability",
     description:
       "We are committed to practices that protect and preserve our environment for future generations.",
-    color: "bg-leaf",
+    color: "bg-green-200",
+    textColor: "text-gray-800",
   },
   {
     icon: Zap,
     title: "Impact",
     description:
       "We measure our success by the positive change we create in communities and livelihoods.",
-    color: "bg-earth",
+    color: "bg-orange-500",
+    textColor: "text-white",
   },
 ];
 
@@ -238,9 +243,9 @@ const About = () => {
               <div key={value.title} className="relative group">
                 <div className="bg-card rounded-2xl p-6 h-full border border-border hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
                   <div
-                    className={`w-14 h-14 rounded-2xl ${value.color} flex items-center justify-center mb-5 shadow-lg`}
+                    className={`w-14 h-14 rounded-2xl ${value.color} flex items-center justify-center mb-5 shadow-lg ${value.textColor}`}
                   >
-                    <value.icon className="h-7 w-7 text-primary-foreground" />
+                    <value.icon className="h-7 w-7" />
                   </div>
                   <h3 className="font-serif text-xl font-bold text-foreground mb-3">
                     {value.title}
