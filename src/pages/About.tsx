@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 import aboutBg from "@/assets/pic3.jpg";
 import aboutImage from "@/assets/pic 5.jpeg";
-import aboutHero from "@/assets/about-hero.jpg";
+import whoWeAreImg from "@/assets/who-we-are.webp";
 
 const qualities = [
   {
@@ -96,7 +96,7 @@ const About = () => {
       <section className="relative py-32 md:py-40 bg-gradient-to-b from-primary/5 to-background overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${aboutHero})` }}
+          style={{ backgroundImage: `url(${whoWeAreImg})` }}
         />
         <div className="absolute inset-0 bg-black/70" />
         <div className="relative z-10 container mx-auto px-4 text-center">
@@ -188,9 +188,9 @@ const About = () => {
       <section className="py-16 md:py-24 bg-muted">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <span className="text-primary text-sm font-semibold uppercase tracking-wider">
+            {/* <span className="text-primary text-sm font-semibold uppercase tracking-wider">
               Our Commitment
-            </span>
+            </span> */}
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-2">
               Why Choose Seedbury ACR?
             </h2>
@@ -221,9 +221,9 @@ const About = () => {
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-primary text-sm font-semibold uppercase tracking-wider">
+            {/* <span className="text-primary text-sm font-semibold uppercase tracking-wider">
               What Drives Us
-            </span>
+            </span> */}
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-2 mb-6">
               Our Core Values
             </h2>
