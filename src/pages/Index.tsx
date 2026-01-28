@@ -57,7 +57,8 @@ const Index = () => {
             </h2>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            {/* Removed 'WHAT WE OFFER' text as requested */}
             {/* Animated business model cards */}
             {[
               {
