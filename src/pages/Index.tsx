@@ -140,15 +140,6 @@ const Index = () => {
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
-            <Link to="/products">
-              <Button
-                size="lg"
-                variant="outline"
-                className="bg-transparent border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
-              >
-                View Our Products
-              </Button>
-            </Link>
           </div>
         </div>
       </section>
