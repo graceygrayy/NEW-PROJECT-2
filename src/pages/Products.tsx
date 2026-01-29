@@ -119,7 +119,7 @@ const Products = () => {
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-105 group-hover:shadow-2xl transition-all duration-200"
                   />
                   <Badge className="absolute top-3 left-3 bg-primary/90 text-primary-foreground shadow-lg">
                     {product.category}
