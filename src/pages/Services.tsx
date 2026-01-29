@@ -12,7 +12,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import servicesBg from "@/assets/pic.jpg";
+import servicesBg from "../../products banner.jpg.jpeg";
 
 const services = [
   {
@@ -77,8 +77,8 @@ const Services = () => {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${servicesBg})` }}
         />
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="relative z-10 container mx-auto px-4 text-center">
+        <div className="absolute inset-0 bg-black/80" />
+        <div className="relative z-10 container mx-auto px-4 text-center flex flex-col items-center justify-center min-h-[300px]">
           {/* Removed 'What We Offer' as requested */}
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-background mt-2 mb-6">
             Our Areas of Expertise
@@ -98,7 +98,7 @@ const Services = () => {
             {services.map((service) => (
               <div
                 key={service.title}
-                className="group p-8 rounded-2xl bg-card border border-border hover:border-primary hover:shadow-xl transition-all duration-300"
+                className="group p-8 rounded-2xl bg-card border border-border hover:border-primary hover:shadow-xl hover:bg-primary/10 transition-all duration-300"
               >
                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <service.icon className="h-8 w-8 text-primary-foreground" />
