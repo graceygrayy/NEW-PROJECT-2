@@ -54,14 +54,21 @@ export const ProductsSection = () => {
   return (
     <section id="products" className="py-20 md:py-32 bg-muted">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-primary text-sm font-semibold uppercase tracking-wider">
-            Our Products
-          </span>
-          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-2 mb-6">
+        <div className="relative text-center max-w-3xl mx-auto mb-16">
+          {/* Background image with dark overlay for readability */}
+          <div className="absolute inset-0 -z-10">
+            <img
+              src="/your-product-bg.jpg" // Replace with your actual image path
+              alt="Premium Seed Varieties Background"
+              className="w-full h-full object-cover object-center rounded-2xl"
+            />
+            <div className="absolute inset-0 bg-black/60 rounded-2xl" />
+          </div>
+          {/* Removed 'Our Products' title */}
+          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-2 mb-6 drop-shadow-lg">
             Premium Seed Varieties
           </h2>
-          <p className="text-muted-foreground text-lg">
+          <p className="text-white/90 text-lg drop-shadow max-w-2xl mx-auto">
             Discover our diverse range of high-quality seeds, carefully selected
             and processed to ensure optimal performance across Ghana's varied
             climatic zones.
