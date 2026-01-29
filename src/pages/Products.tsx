@@ -71,24 +71,19 @@ const Products = () => {
     <div className="min-h-screen">
       <Navbar />
 
-      {/* Hero Section */}
+      {/* Hero Section - Improved like CSR */}
       <section className="relative pt-28 pb-16 md:pt-36 md:pb-24 bg-gradient-to-b from-primary/5 to-background overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${productsBg})` }}
         />
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="relative z-10 container mx-auto px-4 text-center">
-          <span className="text-primary text-sm font-bold uppercase tracking-wider">
-            Our Products
-          </span>
-          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-black text-background mt-2 mb-6">
+        <div className="absolute inset-0 bg-black/80" />
+        <div className="relative z-10 container mx-auto px-4 text-center flex flex-col items-center justify-center min-h-[300px]">
+          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-background mt-2 mb-6 drop-shadow-xl">
             Premium Seed Varieties
           </h1>
-          <p className="text-background/90 text-lg max-w-4xl mx-auto">
-            Seedbury ACR plans to focus on a diverse portfolio of staple and
-            high-value crops, selected for their nutritional value, market
-            demand, and suitability to local growing conditions.
+          <p className="text-background/90 text-lg max-w-2xl mx-auto drop-shadow">
+            Seedbury ACR focus on a diverse portfolio of staple and high-value crops, selected for their nutritional value, market demand, and suitability to local growing conditions.
           </p>
         </div>
       </section>
