@@ -50,7 +50,7 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
-      <HeroSection />
+    <HeroSection />
 
       {/* Quick Highlights Section */}
       <section className="py-16 md:py-24 bg-background">

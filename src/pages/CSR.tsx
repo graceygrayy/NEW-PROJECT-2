@@ -1,4 +1,5 @@
 import { Navbar } from "@/components/Navbar";
+import { AnimatedCounter } from "@/components/AnimatedCounter";
 import { Footer } from "@/components/Footer";
 import {
   Heart,
@@ -66,10 +67,10 @@ const initiatives = [
 ];
 
 const impactStats = [
-  { number: "20+", label: "Communities Reached" },
-  { number: "10,000+", label: "Trees Planted" },
-  { number: "2,000+", label: "Farmers Trained" },
-  { number: "500+", label: "Families Supported" },
+  { number: 20, label: "Communities Reached", duration: 2500, suffix: "+" },
+  { number: 10000, label: "Trees Planted", duration: 3500, suffix: "+" },
+  { number: 2000, label: "Farmers Trained", duration: 3000, suffix: "+" },
+  { number: 500, label: "Families Supported", duration: 2500, suffix: "+" },
 ];
 
 const CSR = () => {
@@ -102,7 +103,7 @@ const CSR = () => {
             {impactStats.map((stat) => (
               <div key={stat.label} className="text-center">
                 <span className="block font-serif text-3xl md:text-4xl font-bold text-primary-foreground">
-                  {stat.number}
+                  <AnimatedCounter target={stat.number} duration={stat.duration} suffix={stat.suffix} />
                 </span>
                 <span className="text-sm text-primary-foreground/80">
                   {stat.label}

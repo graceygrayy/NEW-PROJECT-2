@@ -3,6 +3,7 @@ import { ArrowRight, Leaf } from "lucide-react";
 import { Link } from "react-router-dom";
 
 import heroCrops from "@/assets/hero-crops.jpg";
+import { AnimatedCounter } from "./AnimatedCounter";
 
 export const HeroSection = () => {
   return (
@@ -69,21 +70,21 @@ export const HeroSection = () => {
         >
           <div>
             <span className="block font-serif text-3xl md:text-4xl font-bold text-white">
-              15+
+              <AnimatedCounter target={15} duration={3500} suffix="+" />
             </span>
             <span className="text-sm text-white/70">Years Experience</span>
           </div>
           <div className="w-px h-12 bg-white/30" />
           <div>
             <span className="block font-serif text-3xl md:text-4xl font-bold text-white">
-              5000+
+              <AnimatedCounter target={5000} duration={4000} suffix="+" />
             </span>
             <span className="text-sm text-white/70">Farmers Empowered</span>
           </div>
           <div className="w-px h-12 bg-white/30" />
           <div>
             <span className="block font-serif text-3xl md:text-4xl font-bold text-white">
-              50+
+              <AnimatedCounter target={50} duration={3500} suffix="+" />
             </span>
             <span className="text-sm text-white/70">Seed Varieties</span>
           </div>
